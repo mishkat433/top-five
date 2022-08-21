@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="bg-gray-500">
+<body class="bg-gray-400">
     <!-- Header start -->
     <header class="bg-slate-900 flex flex-col lg:flex-row items-center justify-between  w-full ">
         <div class="w-6/12 lg:w-3/12 pt-5 lg:pt-10 mb-5 lg:mb-0 ">
             <img class="w-full " src="./images/ozil.png" alt="Ozil Photo">
         </div>
         <article class="text-center w-11/12 lg:w-3/5">
-            <h1 class="text-4xl lg:text-5xl text-orange-600 mb-8 heading font-bold">Who is the best players in your eys
+            <h1 class="text-4xl lg:text-5xl text-orange-600 mb-8 heading font-bold">Who is the best players in your eye
             </h1>
             <p class="text-white text-lg lg:text-xl">A German international, Ozil holds the record for the most German
                 Player of
@@ -34,6 +34,34 @@
     </header>
     <!-- Header end -->
 
+    <!-- main section start -->
+    <main class="w-11/12 mx-auto my-10">
+        <!-- card section start -->
+        <section class="flex flex-col-reverse lg:flex-row gap-8">
+            <div class="lg:w-4/5 w-full grid grid-cols-1 lg:grid-cols-3 gap-5" id="allCard">
+                <!-- Card Dinamicaly added -->
+            </div>
+
+            <div class="w-1/5 bg-slate-400 ">
+                <div class=" bg-slate-900 rounded-lg p-5">
+                    <h1 class="text-2xl text-white text-center pt-5">Selected - V</h1>
+                    <hr class="my-3">
+                    <ol class=" my-10 text-white list-inside list" id="orderList">
+
+                    </ol>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </section>
+        <!-- card section end -->
+    </main>
+    <!-- main section end -->
+
+    <!-- javaScript connect -->
+    <script src="./js/object.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
