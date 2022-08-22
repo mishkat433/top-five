@@ -1,7 +1,8 @@
 
-// Card added start
-const findCardParent = document.getElementById("allCard");
+// Dinamic card added start
+const findCardParent = document.getElementById("allDinamicCard");
 
+//  allCard import from object.js
 for (let i = 0; i < allCard.length; i++) {
     const createCard = document.createElement("div");
 
@@ -13,13 +14,13 @@ for (let i = 0; i < allCard.length; i++) {
         <h4>${allCard[i].goal} Goals</h4>
         <h4>${allCard[i].assist} Assist</h4>
     </div>
-    <button class="w-full h-14 text-center text-white bg-orange-600 rounded-lg hover:bg-orange-800" id="card-button-${i}">
+    <button class="w-full h-14 text-center text-lg text-white bg-orange-600 rounded-lg hover:bg-orange-800" id="card-button-${i}">
         SELECT</button>
 </div>
 </div>`;
     findCardParent.appendChild(createCard);
 }
-// Card added end
+// Dinamic card added end
 
 
 
@@ -31,20 +32,21 @@ for (let i = 0; i < allCard.length; i++) {
     document.getElementById(`card-button-${i}`).addEventListener("click", function (event) {
 
         if (count !== 5) {
-            const findButton = event.target
+            const findButton = event.target;
             findButton.setAttribute("disabled", true);
             findButton.style.backgroundColor = "gray";
+            findButton.innerText = "SELECTED";
 
-            const findPlayerName = event.target.parentNode.children[0].innerText;
+            const selectPlayerName = event.target.parentNode.children[0].innerText;
 
             const findOrderList = document.getElementById("orderList")
             const createList = document.createElement("li")
             count = count + 1;
-            createList.innerHTML = ` ${count}. ${findPlayerName} `
-            findOrderList.appendChild(createList)
+            createList.innerHTML = ` ${count}. ${selectPlayerName} `
+            findOrderList.appendChild(createList);
         }
         else {
-            alert("Not more than five people can be selected")
+            alert("Not more than five Player can be selected");
         }
     })
 
@@ -81,7 +83,7 @@ document.getElementById("totalCalculate").addEventListener("click", function () 
     let managerCost = inputFieldFind("manager");
 
     if (isNaN(managerCost) || managerCost < 0 || isNaN(coachCost) || coachCost < 0) {
-        alert("Please select player or input manager and coach tk ( If not, input '0' ) ")
+        alert("Please select player and calculate per player amount or input manager and coach amount ( If not, input '0' ) ")
     }
     else {
         const totalCost = preExpencesValue + managerCost + coachCost;
