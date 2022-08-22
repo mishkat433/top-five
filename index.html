@@ -9,7 +9,10 @@
     <!-- tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind CDN -->
+
+    <!-- css link -->
     <link rel="stylesheet" href="./style.css">
+    <!-- css link -->
 </head>
 
 <body class="bg-gray-400">
@@ -19,7 +22,7 @@
             <img class="w-full " src="./images/ozil.png" alt="Ozil Photo">
         </div>
         <article class="text-center w-11/12 lg:w-3/5">
-            <h1 class="text-4xl lg:text-5xl text-orange-600 mb-8 heading font-bold">Who is the best players in your eye
+            <h1 class="text-4xl lg:text-5xl text-orange-600 mb-8 heading font-bold">Who is the best players in your eyes
             </h1>
             <p class="text-white text-lg lg:text-xl">A German international, Ozil holds the record for the most German
                 Player of
@@ -42,16 +45,53 @@
                 <!-- Card Dinamicaly added -->
             </div>
 
+
             <div class="w-1/5 bg-slate-400 ">
-                <div class=" bg-slate-900 rounded-lg p-5">
-                    <h1 class="text-2xl text-white text-center pt-5">Selected - V</h1>
+                <!-- Sidebar top -->
+                <div class=" bg-slate-900 rounded-lg p-5 mb-10 h-80">
+                    <h1 class="text-3xl font-semibold text-white text-center pt-5">Selected - V</h1>
                     <hr class="my-3">
-                    <ol class=" my-10 text-white list-inside list" id="orderList">
+                    <ol class=" my-10 text-white list-inside list text-xl" id="orderList">
 
                     </ol>
                 </div>
-                <div>
 
+                <!-- Sidebar bottom -->
+                <div class=" bg-slate-900 rounded-lg p-5">
+                    <h1 class="text-3xl font-semibold text-white text-center pt-5">Budget</h1>
+                    <hr class="my-3">
+                    <div class="mb-6 ">
+                        <label for="perPlayer" class="block mb-2 text-lg text-white ">Per
+                            Player : </label>
+                        <input type="text" id="perPlayer"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                    </div>
+                    <button type="submit" id="perPlayerCalculate"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800  font-medium rounded-lg px-5 py-2.5 text-center ">Calculate</button>
+
+                    <div class="flex justify-between text-white my-5 text-lg">
+                        <h4>Player Expences : </h4>
+                        <h4>$<span id="expences">00</span></h4>
+                    </div>
+
+                    <div class="mb-6 ">
+                        <label for="manager" class="block mb-2 text-lg text-white ">Manager : </label>
+                        <input type="text" id="manager"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                    </div>
+                    <div class="mb-6 ">
+                        <label for="coach" class="block mb-2 text-lg text-white ">Coach : </label>
+                        <input type="text" id="coach"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
+                    </div>
+                    <button type="submit"
+                        class="text-white w-full bg-blue-700 hover:bg-blue-800  font-medium rounded-lg px-5 py-2.5 text-center ">Calculate
+                        Total</button>
+
+                    <div class="flex justify-between text-white my-5 text-lg">
+                        <h4>Total : </h4>
+                        <h4>$<span id="total">00</span></h4>
+                    </div>
                 </div>
             </div>
         </section>
