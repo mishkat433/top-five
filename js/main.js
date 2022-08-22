@@ -14,7 +14,7 @@ for (let i = 0; i < allCard.length; i++) {
         <h4>${allCard[i].assist} Assist</h4>
     </div>
     <button class="w-full h-14 text-center text-white bg-orange-600 rounded-lg hover:bg-orange-800" id="card-button-${i}">
-        Read more</button>
+        SELECT</button>
 </div>
 </div>`;
     findCardParent.appendChild(createCard);
@@ -72,3 +72,18 @@ document.getElementById("perPlayerCalculate").addEventListener("click", function
 
 
 
+// common function start
+
+function inputFieldFind(fieldId) {
+    const fieldString = document.getElementById(fieldId);
+    const fieldValue = parseFloat(fieldString.value);
+
+    return fieldValue;
+}
+
+function setValue(elementId, value) {
+    const findElement = document.getElementById(elementId);
+    findElement.innerText = value;
+}
+
+// common function end
