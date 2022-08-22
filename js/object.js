@@ -38,15 +38,21 @@ const allCard = [
         assist: 180
     },
     {
-        playerImage: "../images/Radamel Falcao.webp",
-        playerName: "Radamel Falcao",
+        playerImage: "../images/David-Beckham.webp",
+        playerName: "David Beckham",
         goal: 174,
         assist: 77
     },
     {
-        playerImage: "../images/dmaria.jpg",
-        playerName: "Di Maria",
-        goal: 204,
-        assist: 180
+        playerImage: "../images/neymar.jpeg",
+        playerName: "Neymar",
+        goal: 311,
+        assist: 222
+    },
+    {
+        playerImage: "../images/RONALDINHO.webp",
+        playerName: "Ronaldinho",
+        goal: 484,
+        assist: 190
     }
 ]

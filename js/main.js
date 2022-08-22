@@ -70,6 +70,27 @@ document.getElementById("perPlayerCalculate").addEventListener("click", function
 // Per Player Cost Calcutale end
 
 
+// Total Cost Calculate start
+
+document.getElementById("totalCalculate").addEventListener("click", function () {
+
+    const preExpencesValueString = document.getElementById("expences").innerText;
+    const preExpencesValue = parseFloat(preExpencesValueString);
+
+    let coachCost = inputFieldFind("coach");
+    let managerCost = inputFieldFind("manager");
+
+    if (isNaN(managerCost) || managerCost < 0 || isNaN(coachCost) || coachCost < 0) {
+        alert("Please select player or input manager and coach tk ( If not, input '0' ) ")
+    }
+    else {
+        const totalCost = preExpencesValue + managerCost + coachCost;
+        setValue("total", totalCost);
+    }
+})
+
+// Total Cost Calculate end
+
 
 
 // common function start
