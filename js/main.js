@@ -24,7 +24,9 @@ for (let i = 0; i < allCard.length; i++) {
 
 
 // Select player Count start
+
 let count = 0
+
 for (let i = 0; i < allCard.length; i++) {
     document.getElementById(`card-button-${i}`).addEventListener("click", function (event) {
 
@@ -49,6 +51,24 @@ for (let i = 0; i < allCard.length; i++) {
 }
 
 // Select player Count end
+
+// Per Player Cost Calcutale start
+document.getElementById("perPlayerCalculate").addEventListener("click", function () {
+
+    const perPlayerCost = inputFieldFind("perPlayer");
+
+    if (count === 0 || isNaN(perPlayerCost) || perPlayerCost < 0) {
+        alert("Please select player or input per player amount Positive value")
+    }
+    else {
+        const perPlayerTotal = perPlayerCost * count;
+        setValue("expences", perPlayerTotal);
+    }
+
+})
+
+// Per Player Cost Calcutale end
+
 
 
 
