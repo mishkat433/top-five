@@ -2,7 +2,7 @@
 // Dinamic card added start
 const findCardParent = document.getElementById("allDinamicCard");
 
-//  allCard import from object.js
+//  allCard import from cardObject.js
 for (let i = 0; i < allCard.length; i++) {
     const createCard = document.createElement("div");
 
@@ -26,16 +26,16 @@ for (let i = 0; i < allCard.length; i++) {
 
 // Select player Count start
 
-let count = 0
+let count = 0;
 
 for (let i = 0; i < allCard.length; i++) {
     document.getElementById(`card-button-${i}`).addEventListener("click", function (event) {
 
         if (count !== 5) {
-            const findButton = event.target;
-            findButton.setAttribute("disabled", true);
-            findButton.style.backgroundColor = "gray";
-            findButton.innerText = "SELECTED";
+            const findSelectButton = event.target;
+            findSelectButton.setAttribute("disabled", true);
+            findSelectButton.style.backgroundColor = "gray";
+            findSelectButton.innerText = "SELECTED";
 
             const selectPlayerName = event.target.parentNode.children[0].innerText;
 
@@ -79,14 +79,14 @@ document.getElementById("totalCalculate").addEventListener("click", function () 
     const preExpencesValueString = document.getElementById("expences").innerText;
     const preExpencesValue = parseFloat(preExpencesValueString);
 
-    let coachCost = inputFieldFind("coach");
-    let managerCost = inputFieldFind("manager");
+    let coachSalary = inputFieldFind("coach");
+    let managerSalary = inputFieldFind("manager");
 
-    if (isNaN(managerCost) || managerCost < 0 || isNaN(coachCost) || coachCost < 0) {
+    if (isNaN(managerSalary) || managerSalary < 0 || isNaN(coachSalary) || coachSalary < 0) {
         alert("Please select player and calculate per player amount or input manager and coach amount ( If not, input '0' ) ")
     }
     else {
-        const totalCost = preExpencesValue + managerCost + coachCost;
+        const totalCost = preExpencesValue + managerSalary + coachSalary;
         setValue("total", totalCost);
     }
 })
